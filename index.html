@@ -2,17 +2,27 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Finance Manager</title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
-    <!-- PASSWORD SCREEN -->
+
+    <!-- ==================================================
+         PASSWORD SCREEN
+    ================================================== -->
 
     <div id="lockScreen">
 
@@ -22,28 +32,35 @@
                 🔐
             </div>
 
+
             <p class="smallText">
                 PERSONAL FINANCE
             </p>
+
 
             <h1>
                 FINANCE<br>
                 <span>MANAGER</span>
             </h1>
 
+
             <p class="description">
                 Your money. Your control.
             </p>
+
 
             <input
                 id="password"
                 type="password"
                 placeholder="Enter password"
+                autocomplete="off"
             >
+
 
             <button id="unlockBtn">
                 ENTER APP →
             </button>
+
 
             <p id="wrongPassword"></p>
 
@@ -52,13 +69,20 @@
     </div>
 
 
-    <!-- MAIN APP -->
+
+    <!-- ==================================================
+         MAIN APP
+    ================================================== -->
 
     <div id="app">
 
-        <!-- HEADER -->
+
+        <!-- ==================================================
+             HEADER
+        ================================================== -->
 
         <header>
+
 
             <div class="titleArea">
 
@@ -66,10 +90,12 @@
                     WELCOME BACK
                 </p>
 
+
                 <h1>
                     FINANCE<br>
                     <span>MANAGER</span>
                 </h1>
+
 
                 <p class="description">
                     Take control of your money.
@@ -78,41 +104,63 @@
             </div>
 
 
+
             <!-- ROBOT -->
 
             <div class="robotArea">
 
                 <div class="glow"></div>
 
+
                 <div class="robot">
 
+
                     <div class="antenna">
+
                         <div></div>
+
                     </div>
+
+
 
                     <div class="robotHead">
 
+
                         <div class="eyes">
+
                             <div></div>
+
                             <div></div>
+
                         </div>
+
 
                         <div class="mouth"></div>
 
+
                     </div>
 
+
+
                     <div class="robotBody">
+
 
                         <div class="robotScreen">
                             ₹
                         </div>
 
+
                         <div class="robotLight"></div>
+
 
                     </div>
 
+
+
                     <div class="arm leftArm"></div>
+
                     <div class="arm rightArm"></div>
+
 
                 </div>
 
@@ -121,15 +169,23 @@
         </header>
 
 
-        <!-- TOTAL BALANCE -->
+
+        <!-- ==================================================
+             TOTAL BALANCE
+        ================================================== -->
 
         <section class="balanceCard">
 
+
             <div class="cardTop">
+
 
                 <div>
 
-                    <p>TOTAL BALANCE</p>
+                    <p>
+                        TOTAL BALANCE
+                    </p>
+
 
                     <span>
                         ● Available
@@ -137,15 +193,21 @@
 
                 </div>
 
+
                 <div class="moneyIcon">
                     ₹
                 </div>
 
+
             </div>
+
+
 
             <h2 id="balance">
                 ₹0
             </h2>
+
+
 
             <div class="cardBottom">
 
@@ -153,139 +215,212 @@
                     Your available money
                 </span>
 
+
                 <span>
                     ↗
                 </span>
 
             </div>
 
+
         </section>
 
 
-        <!-- MONTHLY SALARY -->
+
+        <!-- ==================================================
+             MONTHLY SALARY
+        ================================================== -->
 
         <section class="salaryCard">
+
 
             <div class="salaryIcon">
                 💼
             </div>
 
+
+
             <div class="salaryInfo">
+
 
                 <p>
                     SALARY PER MONTH
                 </p>
 
+
                 <h2 id="salary">
                     ₹0
                 </h2>
 
+
             </div>
+
+
 
             <button id="salaryBtn">
                 + ADD
             </button>
 
+
         </section>
 
 
-<!-- ================= EXPENSES ================= -->
 
-<section class="expensesSection">
+        <!-- ==================================================
+             EXPENSES
+        ================================================== -->
 
-    <div class="sectionHeader">
-
-        <div>
-            <p class="smallText">MONEY TRACKER</p>
-
-            <h2>Expenses</h2>
-        </div>
-
-        <button id="addExpenseBtn" class="addExpenseBtn">
-            +
-        </button>
-
-    </div>
+        <section class="expensesSection">
 
 
-    <!-- ADD EXPENSE FORM -->
+            <!-- EXPENSE HEADER -->
 
-    <div id="expenseForm" class="expenseForm">
-
-        <h3>Add Expense</h3>
-
-        <label>
-            Expense Title
-        </label>
-
-        <input
-            id="expenseTitle"
-            type="text"
-            placeholder="e.g. Food"
-        >
+            <div class="sectionHeader">
 
 
-        <label>
-            Amount Spent
-        </label>
+                <div>
 
-        <input
-            id="expenseAmount"
-            type="number"
-            placeholder="e.g. 500"
-        >
+                    <p class="smallText">
+                        MONEY TRACKER
+                    </p>
 
 
-        <div class="expenseFormButtons">
+                    <h2>
+                        Expenses
+                    </h2>
 
-            <button
-                id="cancelExpenseBtn"
-                class="cancelExpenseBtn">
-
-                Cancel
-
-            </button>
+                </div>
 
 
-            <button
-                id="saveExpenseBtn"
-                class="saveExpenseBtn">
 
-                Save Expense
-
-            </button>
-
-        </div>
-
-    </div>
+                <button
+                    id="addExpenseBtn"
+                    class="addExpenseBtn"
+                >
+                    +
+                </button>
 
 
-    <!-- EXPENSE CARDS -->
-
-    <div id="expensesList">
-
-        <div class="noExpenses">
-
-            <div>
-                💸
             </div>
 
-            <h3>
-                No expenses yet
-            </h3>
 
-            <p>
-                Add your first expense.
-            </p>
 
-        </div>
+            <!-- ==================================================
+                 ADD EXPENSE FORM
+            ================================================== -->
+
+            <div
+                id="expenseForm"
+                class="expenseForm"
+            >
+
+
+                <h3>
+                    Add Expense
+                </h3>
+
+
+
+                <label>
+                    Expense Title
+                </label>
+
+
+                <input
+                    id="expenseTitle"
+                    type="text"
+                    placeholder="e.g. Food"
+                    autocomplete="off"
+                >
+
+
+
+                <label>
+                    Amount Spent
+                </label>
+
+
+                <input
+                    id="expenseAmount"
+                    type="number"
+                    placeholder="e.g. 500"
+                    min="1"
+                >
+
+
+
+                <div class="expenseFormButtons">
+
+
+                    <button
+                        id="cancelExpenseBtn"
+                        class="cancelExpenseBtn"
+                    >
+                        Cancel
+                    </button>
+
+
+
+                    <button
+                        id="saveExpenseBtn"
+                        class="saveExpenseBtn"
+                    >
+                        Save Expense
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 EXPENSE CARDS WILL APPEAR HERE
+            ================================================== -->
+
+            <div id="expensesList">
+
+
+                <div class="noExpenses">
+
+
+                    <div>
+                        💸
+                    </div>
+
+
+                    <h3>
+                        No expenses yet
+                    </h3>
+
+
+                    <p>
+                        Add your first expense.
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
 
     </div>
 
-</section>
 
+
+    <!-- ==================================================
+         JAVASCRIPT
+    ================================================== -->
 
     <script src="script.js"></script>
+
 
 </body>
 
