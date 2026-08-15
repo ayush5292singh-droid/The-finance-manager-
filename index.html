@@ -752,7 +752,123 @@ header{
 
 </section>
 
+<!-- ================= NAVIGATION ================= -->
 
+<nav class="mainNav">
+
+    <button class="navBtn active" onclick="showPage('dashboard')">
+        🏠
+        <span>Dashboard</span>
+    </button>
+
+    <button class="navBtn" onclick="showPage('expenses')">
+        💸
+        <span>Expenses</span>
+    </button>
+
+    <button class="navBtn" onclick="showPage('stats')">
+        📊
+        <span>Stats</span>
+    </button>
+
+</nav>
+
+
+<!-- ================= DASHBOARD PAGE ================= -->
+
+<section id="dashboardPage" class="page">
+
+    <div class="pageTitle">
+        <p class="smallText">OVERVIEW</p>
+        <h2>Your Money</h2>
+    </div>
+
+    <div class="dashboardWelcome">
+        <div>
+            <h3>Stay in control 💪</h3>
+            <p>Track your spending and manage your money.</p>
+        </div>
+
+        <div class="dashboardEmoji">
+            🤖
+        </div>
+    </div>
+
+</section>
+
+
+<!-- ================= STATS PAGE ================= -->
+
+<section id="statsPage" class="page">
+
+    <div class="pageTitle">
+        <p class="smallText">ANALYTICS</p>
+        <h2>Weekly Stats</h2>
+    </div>
+
+    <div class="statsCard">
+
+        <h3>Spending This Week</h3>
+
+        <div class="barChart">
+
+            <div class="barItem">
+                <div class="bar" id="barMon"></div>
+                <span>Mon</span>
+            </div>
+
+            <div class="barItem">
+                <div class="bar" id="barTue"></div>
+                <span>Tue</span>
+            </div>
+
+            <div class="barItem">
+                <div class="bar" id="barWed"></div>
+                <span>Wed</span>
+            </div>
+
+            <div class="barItem">
+                <div class="bar" id="barThu"></div>
+                <span>Thu</span>
+            </div>
+
+            <div class="barItem">
+                <div class="bar" id="barFri"></div>
+                <span>Fri</span>
+            </div>
+
+            <div class="barItem">
+                <div class="bar" id="barSat"></div>
+                <span>Sat</span>
+            </div>
+
+            <div class="barItem">
+                <div class="bar" id="barSun"></div>
+                <span>Sun</span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="tipCard">
+
+        <div class="tipIcon">
+            💡
+        </div>
+
+        <div>
+            <h3>Money Tip</h3>
+
+            <p id="moneyTip">
+                Add some expenses to get personalized spending tips.
+            </p>
+        </div>
+
+    </div>
+
+</section>
 <!-- EXPENSES -->
 
 <section class="expensesSection">
