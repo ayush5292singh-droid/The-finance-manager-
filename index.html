@@ -22,14 +22,23 @@ body{
     min-height:100vh;
 }
 
-/* LOCK SCREEN */
+button,
+input{
+    font-family:inherit;
+}
+
+
+/* =====================================================
+   PASSWORD SCREEN
+===================================================== */
 
 #lockScreen{
     min-height:100vh;
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
     padding:20px;
+
     background:
     radial-gradient(circle at 10% 10%,rgba(111,91,255,.35),transparent 35%),
     radial-gradient(circle at 90% 90%,rgba(54,155,255,.25),transparent 35%),
@@ -41,9 +50,12 @@ body{
     max-width:410px;
     padding:40px 30px;
     text-align:center;
+
     border-radius:30px;
+
     background:#131724;
     border:1px solid #292f42;
+
     box-shadow:0 30px 80px rgba(0,0,0,.5);
 }
 
@@ -51,18 +63,24 @@ body{
     width:75px;
     height:75px;
     margin:auto;
+
     display:flex;
     align-items:center;
     justify-content:center;
+
     border-radius:23px;
-    font-size:32px;
+
     background:linear-gradient(135deg,#7969ff,#4c9eff);
+
+    font-size:32px;
 }
 
 .smallText{
     color:#858da5;
+
     font-size:10px;
     font-weight:800;
+
     letter-spacing:2px;
 }
 
@@ -72,82 +90,130 @@ body{
 
 .lockCard h1{
     margin-top:10px;
+
     font-size:43px;
     line-height:.95;
+    letter-spacing:-2px;
 }
 
-h1 span{
+.lockCard h1 span{
     color:#8b7dff;
 }
 
 .description{
     color:#858da5;
+
     margin:15px 0 25px;
+
     font-size:14px;
 }
 
 #password{
     width:100%;
+
     padding:16px;
+
     border-radius:15px;
+
     border:1px solid #30374e;
+
     outline:none;
+
     background:#0a0d16;
     color:white;
+
     text-align:center;
+
     font-size:16px;
+}
+
+#password:focus{
+    border-color:#7868ff;
 }
 
 #unlockBtn{
     width:100%;
+
     margin-top:12px;
+
     padding:16px;
+
     border:0;
     border-radius:15px;
+
     color:white;
+
     background:linear-gradient(100deg,#7868ff,#4d9eff);
+
     font-weight:800;
+
     cursor:pointer;
 }
 
 #wrongPassword{
     min-height:18px;
+
     margin-top:12px;
+
     color:#ff6878;
+
     font-size:13px;
 }
 
 
-/* MAIN APP */
+/* =====================================================
+   MAIN APP
+===================================================== */
 
 #app{
     display:none;
+
     max-width:1100px;
+
     margin:auto;
-    padding:35px 20px 70px;
+
+    padding:35px 20px 90px;
 }
+
+
+/* =====================================================
+   HEADER
+===================================================== */
 
 header{
     display:flex;
+
     align-items:center;
     justify-content:space-between;
-    margin-bottom:35px;
+
+    margin-bottom:30px;
 }
 
 .titleArea h1{
     margin-top:9px;
+
     font-size:55px;
+
     line-height:.9;
+
     letter-spacing:-3px;
 }
 
+.titleArea h1 span{
+    color:#8b7dff;
+}
 
-/* ROBOT */
+
+/* =====================================================
+   ROBOT
+===================================================== */
 
 .robotArea{
     width:170px;
     height:180px;
+
     position:relative;
+
     display:flex;
     align-items:center;
     justify-content:center;
@@ -155,196 +221,363 @@ header{
 
 .glow{
     position:absolute;
+
     width:140px;
     height:140px;
+
     border-radius:50%;
+
     background:#7061ff;
+
     filter:blur(55px);
+
     opacity:.25;
 }
 
 .robot{
     width:110px;
     height:160px;
+
     position:relative;
+
     z-index:2;
 }
 
 .antenna{
     position:absolute;
+
     top:0;
     left:53px;
+
     width:4px;
     height:20px;
+
     background:#7868ff;
 }
 
 .antenna div{
     width:9px;
     height:9px;
+
     position:absolute;
+
     top:-5px;
     left:-2px;
+
     border-radius:50%;
+
     background:#63b8ff;
+
+    box-shadow:0 0 15px #63b8ff;
 }
 
 .robotHead{
     position:absolute;
+
     top:18px;
     left:12px;
+
     width:87px;
     height:70px;
+
     border-radius:24px;
+
     background:linear-gradient(145deg,#897bff,#5144bc);
 }
 
 .eyes{
     display:flex;
+
     justify-content:center;
+
     gap:20px;
+
     padding-top:20px;
 }
 
 .eyes div{
     width:9px;
     height:12px;
+
     border-radius:50%;
+
     background:#a5ddff;
+
+    box-shadow:0 0 12px #64baff;
 }
 
 .mouth{
     width:22px;
     height:5px;
+
     margin:8px auto;
+
     border-radius:10px;
+
     background:#958aff;
 }
 
 .robotBody{
     position:absolute;
+
     top:94px;
     left:24px;
+
     width:62px;
     height:56px;
+
     border-radius:18px;
+
     background:linear-gradient(145deg,#30374c,#151a28);
+
     border:1px solid #3a4158;
 }
 
 .robotScreen{
     width:35px;
     height:25px;
+
     margin:10px auto;
+
     display:flex;
+
     align-items:center;
     justify-content:center;
+
     border-radius:7px;
+
     background:#080b13;
+
     color:#78baff;
+
     font-weight:bold;
 }
 
 .robotLight{
     width:6px;
     height:6px;
+
     margin:-3px auto;
+
     border-radius:50%;
+
     background:#8173ff;
 }
 
 .arm{
     position:absolute;
+
     top:98px;
+
     width:11px;
     height:39px;
+
     border-radius:10px;
+
     background:#555cad;
 }
 
 .leftArm{
     left:10px;
+
     transform:rotate(25deg);
 }
 
 .rightArm{
     right:8px;
+
     transform:rotate(-25deg);
 }
 
 
-/* BALANCE */
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.mainNav{
+    display:flex;
+
+    gap:8px;
+
+    padding:7px;
+
+    margin-bottom:25px;
+
+    background:#111521;
+
+    border:1px solid #292f42;
+
+    border-radius:19px;
+}
+
+.navBtn{
+    flex:1;
+
+    padding:14px 10px;
+
+    border:0;
+
+    border-radius:13px;
+
+    background:transparent;
+
+    color:#777f94;
+
+    font-size:14px;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.navBtn:hover{
+    color:white;
+}
+
+.navBtn.active{
+    color:white;
+
+    background:linear-gradient(
+        135deg,
+        #7868ff,
+        #4d9eff
+    );
+}
+
+
+/* =====================================================
+   PAGE SYSTEM
+===================================================== */
+
+.page{
+    display:none;
+}
+
+.page.active{
+    display:block;
+}
+
+
+/* =====================================================
+   BALANCE
+===================================================== */
 
 .balanceCard{
     padding:28px;
+
     border-radius:27px;
-    background:linear-gradient(135deg,#6052e8,#7868ff 55%,#4d9eff);
+
+    background:linear-gradient(
+        135deg,
+        #6052e8,
+        #7868ff 55%,
+        #4d9eff
+    );
+
+    box-shadow:
+    0 25px 60px rgba(85,75,230,.25);
+
     margin-bottom:16px;
 }
 
 .cardTop{
     display:flex;
+
     justify-content:space-between;
+
+    align-items:flex-start;
 }
 
 .cardTop p{
     font-size:11px;
+
     font-weight:800;
+
     letter-spacing:1.8px;
 }
 
 .cardTop span{
     display:block;
+
     margin-top:7px;
+
     font-size:11px;
+
     opacity:.7;
 }
 
 .moneyIcon{
     width:45px;
     height:45px;
+
     display:flex;
+
     align-items:center;
     justify-content:center;
+
     border-radius:14px;
+
     background:rgba(255,255,255,.15);
+
     font-size:21px;
 }
 
 .balanceCard h2{
     margin:17px 0;
+
     font-size:45px;
+
+    letter-spacing:-1px;
 }
 
 .cardBottom{
     display:flex;
+
     justify-content:space-between;
+
     font-size:12px;
+
     opacity:.7;
 }
 
 
-/* SALARY */
+/* =====================================================
+   SALARY
+===================================================== */
 
 .salaryCard{
     display:flex;
+
     align-items:center;
+
     gap:14px;
+
     padding:20px;
-    margin-bottom:35px;
+
+    margin-bottom:25px;
+
     border-radius:22px;
+
     background:#131724;
+
     border:1px solid #292f42;
 }
 
 .salaryIcon{
     width:50px;
     height:50px;
+
     display:flex;
+
     align-items:center;
     justify-content:center;
+
     border-radius:16px;
+
     background:#20213d;
+
     font-size:22px;
 }
 
@@ -354,28 +587,79 @@ header{
 
 .salaryInfo p{
     color:#858da5;
+
     font-size:10px;
+
     font-weight:800;
+
     letter-spacing:1.5px;
 }
 
 .salaryInfo h2{
     margin-top:5px;
+
     font-size:23px;
 }
 
 #salaryBtn{
     padding:11px 17px;
+
     border:0;
+
     border-radius:12px;
+
     background:#292e43;
+
     color:#aaa0ff;
+
     font-weight:800;
+
     cursor:pointer;
 }
 
 
-/* EXPENSE SECTION */
+/* =====================================================
+   DASHBOARD
+===================================================== */
+
+.dashboardBox{
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:25px;
+
+    margin-bottom:25px;
+
+    border-radius:23px;
+
+    background:#131724;
+
+    border:1px solid #292f42;
+}
+
+.dashboardBox h2{
+    margin-bottom:7px;
+
+    font-size:22px;
+}
+
+.dashboardBox p{
+    color:#858da5;
+
+    font-size:13px;
+}
+
+.dashboardRobot{
+    font-size:50px;
+}
+
+
+/* =====================================================
+   EXPENSES
+===================================================== */
 
 .expensesSection{
     margin-top:10px;
@@ -383,101 +667,169 @@ header{
 
 .sectionHeader{
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
+
     margin-bottom:20px;
 }
 
 .sectionHeader h2{
     margin-top:6px;
+
     font-size:30px;
 }
 
 .addExpenseBtn{
     width:55px;
     height:55px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
     border:0;
+
     border-radius:17px;
+
     color:white;
-    background:linear-gradient(135deg,#7868ff,#4d9eff);
+
+    background:linear-gradient(
+        135deg,
+        #7868ff,
+        #4d9eff
+    );
+
     font-size:32px;
+
     cursor:pointer;
+
+    box-shadow:
+    0 12px 30px rgba(100,90,255,.25);
 }
 
 
-/* EXPENSE FORM */
+/* =====================================================
+   EXPENSE FORM
+===================================================== */
 
 .expenseForm{
     display:none;
+
     padding:25px;
+
     margin-bottom:20px;
+
     border-radius:23px;
+
     background:#131724;
+
     border:1px solid #30364b;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.2);
 }
 
 .expenseForm h3{
-    font-size:21px;
     margin-bottom:20px;
+
+    font-size:21px;
 }
 
 .expenseForm label{
     display:block;
+
     margin:15px 0 8px;
+
     color:#858da5;
+
     font-size:12px;
+
     font-weight:700;
 }
 
 .expenseForm input{
     width:100%;
+
     padding:15px;
+
     border-radius:13px;
+
     border:1px solid #30374e;
+
     background:#0a0d16;
+
     color:white;
+
     outline:none;
+
     font-size:15px;
+}
+
+.expenseForm input:focus{
+    border-color:#7868ff;
 }
 
 .expenseFormButtons{
     display:flex;
+
     gap:10px;
+
     margin-top:22px;
 }
 
 .expenseFormButtons button{
     flex:1;
+
     padding:14px;
+
     border:0;
+
     border-radius:13px;
+
     font-weight:800;
+
     cursor:pointer;
 }
 
 .cancelExpenseBtn{
     background:#292e43;
+
     color:#a4acc0;
 }
 
 .saveExpenseBtn{
     color:white;
-    background:linear-gradient(90deg,#7868ff,#4d9eff);
+
+    background:linear-gradient(
+        90deg,
+        #7868ff,
+        #4d9eff
+    );
 }
 
 
-/* NO EXPENSE */
+/* =====================================================
+   EXPENSE CARDS
+===================================================== */
 
 .noExpenses{
     padding:40px 20px;
+
     text-align:center;
+
     border-radius:23px;
+
     background:#111521;
+
     border:1px dashed #30364a;
 }
 
 .noExpenses div{
     font-size:36px;
+
     margin-bottom:10px;
 }
 
@@ -487,82 +839,279 @@ header{
 
 .noExpenses p{
     color:#777f94;
+
     font-size:13px;
 }
 
-
-/* EXPENSE CARD */
-
 .expenseCard{
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
+
     gap:15px;
+
     padding:18px;
+
     margin-bottom:12px;
+
     border-radius:20px;
+
     background:#131724;
+
     border:1px solid #292f42;
+
+    animation:appear .25s ease;
+}
+
+@keyframes appear{
+
+    from{
+        opacity:0;
+        transform:translateY(8px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
 }
 
 .expenseCardLeft{
     display:flex;
+
     align-items:center;
+
     gap:14px;
+
     min-width:0;
 }
 
 .expenseIcon{
     width:52px;
     height:52px;
+
     flex-shrink:0;
+
     display:flex;
+
     align-items:center;
     justify-content:center;
+
     border-radius:16px;
+
     background:#20203d;
+
     font-size:23px;
 }
 
 .expenseCardTitle{
     font-size:16px;
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
 }
 
 .expenseDate{
     margin-top:5px;
+
     color:#777f94;
+
     font-size:11px;
 }
 
 .expenseCardRight{
     display:flex;
+
     align-items:center;
+
     gap:12px;
+
+    flex-shrink:0;
 }
 
 .expenseMoney{
     color:#ff7180;
+
     font-size:16px;
 }
 
 .deleteExpenseBtn{
     width:32px;
     height:32px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
     border:0;
+
     border-radius:9px;
+
     background:#292e40;
+
     color:#a0a8ba;
+
     font-size:19px;
+
     cursor:pointer;
 }
 
 
-/* MOBILE */
+/* =====================================================
+   STATS
+===================================================== */
+
+.statsCard{
+    padding:25px;
+
+    margin-bottom:15px;
+
+    border-radius:23px;
+
+    background:#131724;
+
+    border:1px solid #292f42;
+}
+
+.statsCard h2{
+    font-size:21px;
+
+    margin-bottom:5px;
+}
+
+.statsCard p{
+    color:#777f94;
+
+    font-size:12px;
+}
+
+.chart{
+    height:240px;
+
+    margin-top:30px;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    justify-content:space-around;
+
+    gap:10px;
+
+    border-bottom:1px solid #30364a;
+}
+
+.chartDay{
+    height:100%;
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:flex-end;
+
+    gap:8px;
+}
+
+.chartBar{
+    width:100%;
+
+    max-width:40px;
+
+    height:5px;
+
+    border-radius:10px 10px 3px 3px;
+
+    background:linear-gradient(
+        to top,
+        #7868ff,
+        #4d9eff
+    );
+
+    transition:height .5s ease;
+}
+
+.chartDay span{
+    padding-bottom:8px;
+
+    color:#777f94;
+
+    font-size:11px;
+}
+
+
+/* =====================================================
+   TIPS
+===================================================== */
+
+.tipCard{
+    display:flex;
+
+    gap:15px;
+
+    padding:20px;
+
+    border-radius:20px;
+
+    background:#15162a;
+
+    border:1px solid #38315e;
+}
+
+.tipIcon{
+    width:48px;
+    height:48px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:15px;
+
+    background:#29214e;
+
+    font-size:23px;
+}
+
+.tipCard h3{
+    margin-bottom:5px;
+}
+
+.tipCard p{
+    color:#858da5;
+
+    font-size:13px;
+
+    line-height:1.5;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media(max-width:650px){
 
     #app{
-        padding:25px 15px 60px;
+        padding:25px 15px 70px;
+    }
+
+    header{
+        margin-bottom:25px;
     }
 
     .titleArea h1{
@@ -571,11 +1120,34 @@ header{
 
     .robotArea{
         width:120px;
+
         transform:scale(.75);
+    }
+
+    .balanceCard{
+        padding:23px;
     }
 
     .balanceCard h2{
         font-size:36px;
+    }
+
+    .salaryCard{
+        padding:16px;
+    }
+
+    .salaryInfo h2{
+        font-size:20px;
+    }
+
+    .navBtn{
+        font-size:12px;
+    }
+
+    .navBtn span{
+        display:block;
+
+        margin-top:4px;
     }
 
     .expenseFormButtons{
@@ -584,28 +1156,42 @@ header{
 
     .expenseCardTitle{
         max-width:120px;
-        overflow:hidden;
-        text-overflow:ellipsis;
     }
 
 }
 
+
+/* =====================================================
+   HIDDEN
+===================================================== */
+
+.hidden{
+    display:none !important;
+}
+
 </style>
+
 </head>
 
 
 <body>
 
 
-<!-- PASSWORD -->
+<!-- =====================================================
+     PASSWORD SCREEN
+===================================================== -->
 
 <div id="lockScreen">
 
     <div class="lockCard">
 
-        <div class="lockIcon">🔐</div>
+        <div class="lockIcon">
+            🔐
+        </div>
 
-        <p class="smallText">PERSONAL FINANCE</p>
+        <p class="smallText">
+            PERSONAL FINANCE
+        </p>
 
         <h1>
             FINANCE<br>
@@ -620,6 +1206,7 @@ header{
             id="password"
             type="password"
             placeholder="Enter password"
+            autocomplete="off"
         >
 
         <button id="unlockBtn">
@@ -633,10 +1220,15 @@ header{
 </div>
 
 
-<!-- MAIN APP -->
+
+<!-- =====================================================
+     MAIN APP
+===================================================== -->
 
 <div id="app">
 
+
+<!-- HEADER -->
 
 <header>
 
@@ -690,6 +1282,7 @@ header{
             </div>
 
             <div class="arm leftArm"></div>
+
             <div class="arm rightArm"></div>
 
         </div>
@@ -699,74 +1292,33 @@ header{
 </header>
 
 
-<!-- BALANCE -->
 
-<section class="balanceCard">
-
-    <div class="cardTop">
-
-        <div>
-
-            <p>TOTAL BALANCE</p>
-
-            <span>● Available</span>
-
-        </div>
-
-        <div class="moneyIcon">₹</div>
-
-    </div>
-
-    <h2 id="balance">₹0</h2>
-
-    <div class="cardBottom">
-
-        <span>Your available money</span>
-
-        <span>↗</span>
-
-    </div>
-
-</section>
-
-
-<!-- SALARY -->
-
-<section class="salaryCard">
-
-    <div class="salaryIcon">
-        💼
-    </div>
-
-    <div class="salaryInfo">
-
-        <p>SALARY PER MONTH</p>
-
-        <h2 id="salary">₹0</h2>
-
-    </div>
-
-    <button id="salaryBtn">
-        + ADD
-    </button>
-
-</section>
-
-<!-- ================= NAVIGATION ================= -->
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
 
 <nav class="mainNav">
 
-    <button class="navBtn active" onclick="showPage('dashboard')">
+    <button
+        class="navBtn active"
+        onclick="showPage('dashboard')"
+    >
         🏠
         <span>Dashboard</span>
     </button>
 
-    <button class="navBtn" onclick="showPage('expenses')">
+    <button
+        class="navBtn"
+        onclick="showPage('expenses')"
+    >
         💸
         <span>Expenses</span>
     </button>
 
-    <button class="navBtn" onclick="showPage('stats')">
+    <button
+        class="navBtn"
+        onclick="showPage('stats')"
+    >
         📊
         <span>Stats</span>
     </button>
@@ -774,83 +1326,373 @@ header{
 </nav>
 
 
-<!-- ================= DASHBOARD PAGE ================= -->
 
-<section id="dashboardPage" class="page">
+<!-- =====================================================
+     DASHBOARD PAGE
+===================================================== -->
 
-    <div class="pageTitle">
-        <p class="smallText">OVERVIEW</p>
-        <h2>Your Money</h2>
-    </div>
+<section
+    id="dashboardPage"
+    class="page active"
+>
 
-    <div class="dashboardWelcome">
-        <div>
-            <h3>Stay in control 💪</h3>
-            <p>Track your spending and manage your money.</p>
+
+    <!-- BALANCE -->
+
+    <section class="balanceCard">
+
+        <div class="cardTop">
+
+            <div>
+
+                <p>
+                    TOTAL BALANCE
+                </p>
+
+                <span>
+                    ● Available
+                </span>
+
+            </div>
+
+            <div class="moneyIcon">
+                ₹
+            </div>
+
         </div>
 
-        <div class="dashboardEmoji">
+
+        <h2 id="balance">
+            ₹0
+        </h2>
+
+
+        <div class="cardBottom">
+
+            <span>
+                Your available money
+            </span>
+
+            <span>
+                ↗
+            </span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- SALARY -->
+
+    <section class="salaryCard">
+
+        <div class="salaryIcon">
+            💼
+        </div>
+
+
+        <div class="salaryInfo">
+
+            <p>
+                SALARY PER MONTH
+            </p>
+
+            <h2 id="salary">
+                ₹0
+            </h2>
+
+        </div>
+
+
+        <button id="salaryBtn">
+            + ADD
+        </button>
+
+    </section>
+
+
+
+    <!-- WELCOME -->
+
+    <div class="dashboardBox">
+
+        <div>
+
+            <h2>
+                Stay in control 💪
+            </h2>
+
+            <p>
+                Track your spending and manage your money.
+            </p>
+
+        </div>
+
+        <div class="dashboardRobot">
             🤖
         </div>
+
     </div>
 
 </section>
 
 
-<!-- ================= STATS PAGE ================= -->
 
-<section id="statsPage" class="page">
+<!-- =====================================================
+     EXPENSES PAGE
+===================================================== -->
 
-    <div class="pageTitle">
-        <p class="smallText">ANALYTICS</p>
-        <h2>Weekly Stats</h2>
-    </div>
+<section
+    id="expensesPage"
+    class="page"
+>
+
+
+    <section class="expensesSection">
+
+
+        <div class="sectionHeader">
+
+            <div>
+
+                <p class="smallText">
+                    MONEY TRACKER
+                </p>
+
+                <h2>
+                    Expenses
+                </h2>
+
+            </div>
+
+
+            <button
+                id="addExpenseBtn"
+                class="addExpenseBtn"
+            >
+                +
+            </button>
+
+        </div>
+
+
+
+        <!-- EXPENSE FORM -->
+
+        <div
+            id="expenseForm"
+            class="expenseForm"
+        >
+
+            <h3>
+                Add Expense
+            </h3>
+
+
+            <label>
+                Expense Title
+            </label>
+
+            <input
+                id="expenseTitle"
+                type="text"
+                placeholder="e.g. Food"
+                autocomplete="off"
+            >
+
+
+            <label>
+                Amount Spent
+            </label>
+
+            <input
+                id="expenseAmount"
+                type="number"
+                placeholder="e.g. 500"
+                min="1"
+            >
+
+
+            <div class="expenseFormButtons">
+
+                <button
+                    id="cancelExpenseBtn"
+                    class="cancelExpenseBtn"
+                >
+                    Cancel
+                </button>
+
+
+                <button
+                    id="saveExpenseBtn"
+                    class="saveExpenseBtn"
+                >
+                    Save Expense
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- EXPENSE LIST -->
+
+        <div id="expensesList">
+
+            <div class="noExpenses">
+
+                <div>
+                    💸
+                </div>
+
+                <h3>
+                    No expenses yet
+                </h3>
+
+                <p>
+                    Add your first expense.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+</section>
+
+
+
+<!-- =====================================================
+     STATS PAGE
+===================================================== -->
+
+<section
+    id="statsPage"
+    class="page"
+>
+
 
     <div class="statsCard">
 
-        <h3>Spending This Week</h3>
+        <h2>
+            Weekly Spending
+        </h2>
 
-        <div class="barChart">
+        <p>
+            Your expenses for the current week
+        </p>
 
-            <div class="barItem">
-                <div class="bar" id="barMon"></div>
-                <span>Mon</span>
+
+        <div class="chart">
+
+            <div class="chartDay">
+
+                <div
+                    class="chartBar"
+                    id="barMon"
+                ></div>
+
+                <span>
+                    Mon
+                </span>
+
             </div>
 
-            <div class="barItem">
-                <div class="bar" id="barTue"></div>
-                <span>Tue</span>
+
+            <div class="chartDay">
+
+                <div
+                    class="chartBar"
+                    id="barTue"
+                ></div>
+
+                <span>
+                    Tue
+                </span>
+
             </div>
 
-            <div class="barItem">
-                <div class="bar" id="barWed"></div>
-                <span>Wed</span>
+
+            <div class="chartDay">
+
+                <div
+                    class="chartBar"
+                    id="barWed"
+                ></div>
+
+                <span>
+                    Wed
+                </span>
+
             </div>
 
-            <div class="barItem">
-                <div class="bar" id="barThu"></div>
-                <span>Thu</span>
+
+            <div class="chartDay">
+
+                <div
+                    class="chartBar"
+                    id="barThu"
+                ></div>
+
+                <span>
+                    Thu
+                </span>
+
             </div>
 
-            <div class="barItem">
-                <div class="bar" id="barFri"></div>
-                <span>Fri</span>
+
+            <div class="chartDay">
+
+                <div
+                    class="chartBar"
+                    id="barFri"
+                ></div>
+
+                <span>
+                    Fri
+                </span>
+
             </div>
 
-            <div class="barItem">
-                <div class="bar" id="barSat"></div>
-                <span>Sat</span>
+
+            <div class="chartDay">
+
+                <div
+                    class="chartBar"
+                    id="barSat"
+                ></div>
+
+                <span>
+                    Sat
+                </span>
+
             </div>
 
-            <div class="barItem">
-                <div class="bar" id="barSun"></div>
-                <span>Sun</span>
+
+            <div class="chartDay">
+
+                <div
+                    class="chartBar"
+                    id="barSun"
+                ></div>
+
+                <span>
+                    Sun
+                </span>
+
             </div>
 
         </div>
 
     </div>
 
+
+
+    <!-- TIP -->
 
     <div class="tipCard">
 
@@ -859,103 +1701,19 @@ header{
         </div>
 
         <div>
-            <h3>Money Tip</h3>
+
+            <h3>
+                Money Tip
+            </h3>
 
             <p id="moneyTip">
-                Add some expenses to get personalized spending tips.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-<!-- EXPENSES -->
-
-<section class="expensesSection">
-
-    <div class="sectionHeader">
-
-        <div>
-
-            <p class="smallText">
-                MONEY TRACKER
+                Add expenses to receive a spending tip.
             </p>
 
-            <h2>Expenses</h2>
-
-        </div>
-
-        <button
-            id="addExpenseBtn"
-            class="addExpenseBtn"
-        >
-            +
-        </button>
-
-    </div>
-
-
-    <!-- FORM -->
-
-    <div
-        id="expenseForm"
-        class="expenseForm"
-    >
-
-        <h3>Add Expense</h3>
-
-        <label>Expense Title</label>
-
-        <input
-            id="expenseTitle"
-            type="text"
-            placeholder="e.g. Food"
-        >
-
-        <label>Amount Spent</label>
-
-        <input
-            id="expenseAmount"
-            type="number"
-            placeholder="e.g. 500"
-        >
-
-        <div class="expenseFormButtons">
-
-            <button
-                id="cancelExpenseBtn"
-                class="cancelExpenseBtn"
-            >
-                Cancel
-            </button>
-
-            <button
-                id="saveExpenseBtn"
-                class="saveExpenseBtn"
-            >
-                Save Expense
-            </button>
-
         </div>
 
     </div>
 
-
-    <!-- EXPENSE LIST -->
-
-    <div id="expensesList">
-
-        <div class="noExpenses">
-
-            <div>💸</div>
-
-            <h3>No expenses yet</h3>
-
-            <p>Add your first expense.</p>
-
-        </div>
-
-    </div>
 
 </section>
 
@@ -963,15 +1721,31 @@ header{
 </div>
 
 
+
 <script>
+
+/* =====================================================
+   DATA
+===================================================== */
 
 const PASSWORD = "7890";
 
-let salary = Number(localStorage.getItem("finance_salary")) || 0;
+let salary =
+    Number(
+        localStorage.getItem("finance_salary")
+    ) || 0;
+
 
 let expenses =
-    JSON.parse(localStorage.getItem("finance_expenses")) || [];
+    JSON.parse(
+        localStorage.getItem("finance_expenses")
+    ) || [];
 
+
+
+/* =====================================================
+   ELEMENTS
+===================================================== */
 
 const lockScreen =
     document.getElementById("lockScreen");
@@ -988,11 +1762,11 @@ const unlockBtn =
 const wrongPassword =
     document.getElementById("wrongPassword");
 
-const salaryDisplay =
-    document.getElementById("salary");
-
 const balanceDisplay =
     document.getElementById("balance");
+
+const salaryDisplay =
+    document.getElementById("salary");
 
 const salaryBtn =
     document.getElementById("salaryBtn");
@@ -1019,7 +1793,10 @@ const expensesList =
     document.getElementById("expensesList");
 
 
-/* PASSWORD */
+
+/* =====================================================
+   PASSWORD
+===================================================== */
 
 function unlock(){
 
@@ -1031,10 +1808,12 @@ function unlock(){
 
         wrongPassword.textContent = "";
 
-    }else{
+    }
+
+    else{
 
         wrongPassword.textContent =
-        "Incorrect password.";
+            "Incorrect password.";
 
         password.value = "";
 
@@ -1042,34 +1821,61 @@ function unlock(){
 
 }
 
-unlockBtn.onclick = unlock;
 
-password.onkeydown = function(e){
+unlockBtn.addEventListener(
+    "click",
+    unlock
+);
 
-    if(e.key === "Enter"){
-        unlock();
+
+password.addEventListener(
+    "keydown",
+    function(event){
+
+        if(event.key === "Enter"){
+
+            unlock();
+
+        }
+
     }
+);
 
-};
 
 
-/* MONEY */
+/* =====================================================
+   MONEY CALCULATION
+===================================================== */
 
 function updateMoney(){
 
     let spent = 0;
 
-    expenses.forEach(function(expense){
-        spent += expense.amount;
-    });
 
-    let balance = salary - spent;
+    expenses.forEach(
+        function(expense){
+
+            spent += Number(
+                expense.amount
+            );
+
+        }
+    );
+
+
+    const balance =
+        salary - spent;
+
 
     salaryDisplay.textContent =
-        "₹" + salary.toLocaleString("en-IN");
+        "₹" +
+        salary.toLocaleString("en-IN");
+
 
     balanceDisplay.textContent =
-        "₹" + balance.toLocaleString("en-IN");
+        "₹" +
+        balance.toLocaleString("en-IN");
+
 
     localStorage.setItem(
         "finance_salary",
@@ -1079,151 +1885,316 @@ function updateMoney(){
 }
 
 
-/* SALARY */
 
-salaryBtn.onclick = function(){
+/* =====================================================
+   SALARY
+===================================================== */
 
-    let value =
-        prompt("Enter your monthly salary:");
+salaryBtn.addEventListener(
+    "click",
+    function(){
 
-    if(value === null) return;
-
-    value = Number(value);
-
-    if(!Number.isFinite(value) || value < 0){
-
-        alert("Enter a valid salary.");
-
-        return;
-
-    }
-
-    salary = value;
-
-    updateMoney();
-
-};
+        const value =
+            prompt(
+                "Enter your monthly salary:"
+            );
 
 
-/* OPEN EXPENSE FORM */
+        if(value === null){
 
-addExpenseBtn.onclick = function(){
+            return;
 
-    if(expenseForm.style.display === "block"){
-
-        expenseForm.style.display = "none";
-
-    }else{
-
-        expenseForm.style.display = "block";
-
-        expenseTitle.focus();
-
-    }
-
-};
+        }
 
 
-/* CANCEL */
-
-cancelExpenseBtn.onclick = function(){
-
-    expenseForm.style.display = "none";
-
-    expenseTitle.value = "";
-
-    expenseAmount.value = "";
-
-};
+        const amount =
+            Number(value);
 
 
-/* SAVE EXPENSE */
+        if(
+            !Number.isFinite(amount) ||
+            amount < 0
+        ){
 
-saveExpenseBtn.onclick = function(){
+            alert(
+                "Please enter a valid salary."
+            );
 
-    const title =
-        expenseTitle.value.trim();
+            return;
 
-    const amount =
-        Number(expenseAmount.value);
+        }
 
 
-    if(title === ""){
+        salary = amount;
 
-        alert("Please enter the expense title.");
-
-        return;
+        updateMoney();
 
     }
+);
 
 
-    if(!Number.isFinite(amount) || amount <= 0){
 
-        alert("Please enter a valid amount.");
+/* =====================================================
+   PAGE NAVIGATION
+===================================================== */
 
-        return;
+function showPage(page){
 
-    }
-
-
-    expenses.unshift({
-
-        id:Date.now(),
-
-        title:title,
-
-        amount:amount,
-
-        date:new Date().toLocaleDateString(
-            "en-IN",
-            {
-                day:"numeric",
-                month:"short",
-                year:"numeric"
-            }
-        )
-
-    });
+    const pages =
+        document.querySelectorAll(".page");
 
 
-    localStorage.setItem(
-        "finance_expenses",
-        JSON.stringify(expenses)
+    pages.forEach(
+        function(item){
+
+            item.classList.remove(
+                "active"
+            );
+
+        }
     );
 
 
-    expenseTitle.value = "";
-
-    expenseAmount.value = "";
-
-    expenseForm.style.display = "none";
+    const buttons =
+        document.querySelectorAll(".navBtn");
 
 
-    displayExpenses();
+    buttons.forEach(
+        function(button){
 
-    updateMoney();
+            button.classList.remove(
+                "active"
+            );
 
-};
+        }
+    );
 
 
-/* DISPLAY */
+    if(page === "dashboard"){
+
+        document
+            .getElementById(
+                "dashboardPage"
+            )
+            .classList.add("active");
+
+
+        buttons[0]
+            .classList.add("active");
+
+    }
+
+
+    if(page === "expenses"){
+
+        document
+            .getElementById(
+                "expensesPage"
+            )
+            .classList.add("active");
+
+
+        buttons[1]
+            .classList.add("active");
+
+
+        displayExpenses();
+
+    }
+
+
+    if(page === "stats"){
+
+        document
+            .getElementById(
+                "statsPage"
+            )
+            .classList.add("active");
+
+
+        buttons[2]
+            .classList.add("active");
+
+
+        updateStats();
+
+    }
+
+}
+
+
+
+/* =====================================================
+   OPEN EXPENSE FORM
+===================================================== */
+
+addExpenseBtn.addEventListener(
+    "click",
+    function(){
+
+        if(
+            expenseForm.style.display ===
+            "block"
+        ){
+
+            expenseForm.style.display =
+                "none";
+
+        }
+
+        else{
+
+            expenseForm.style.display =
+                "block";
+
+            expenseTitle.focus();
+
+        }
+
+    }
+);
+
+
+
+/* =====================================================
+   CANCEL EXPENSE
+===================================================== */
+
+cancelExpenseBtn.addEventListener(
+    "click",
+    function(){
+
+        expenseForm.style.display =
+            "none";
+
+        expenseTitle.value = "";
+
+        expenseAmount.value = "";
+
+    }
+);
+
+
+
+/* =====================================================
+   SAVE EXPENSE
+===================================================== */
+
+saveExpenseBtn.addEventListener(
+    "click",
+    function(){
+
+        const title =
+            expenseTitle.value.trim();
+
+
+        const amount =
+            Number(
+                expenseAmount.value
+            );
+
+
+        if(title === ""){
+
+            alert(
+                "Please enter the expense title."
+            );
+
+            return;
+
+        }
+
+
+        if(
+            !Number.isFinite(amount) ||
+            amount <= 0
+        ){
+
+            alert(
+                "Please enter a valid amount."
+            );
+
+            return;
+
+        }
+
+
+        const expense = {
+
+            id:Date.now(),
+
+            title:title,
+
+            amount:amount,
+
+            date:new Date().toLocaleDateString(
+                "en-IN",
+                {
+                    day:"numeric",
+                    month:"short",
+                    year:"numeric"
+                }
+            )
+
+        };
+
+
+        expenses.unshift(
+            expense
+        );
+
+
+        localStorage.setItem(
+            "finance_expenses",
+            JSON.stringify(expenses)
+        );
+
+
+        expenseTitle.value = "";
+
+        expenseAmount.value = "";
+
+        expenseForm.style.display =
+            "none";
+
+
+        displayExpenses();
+
+        updateMoney();
+
+        updateStats();
+
+    }
+);
+
+
+
+/* =====================================================
+   DISPLAY EXPENSES
+===================================================== */
 
 function displayExpenses(){
 
     if(expenses.length === 0){
 
         expensesList.innerHTML = `
-        
-        <div class="noExpenses">
 
-            <div>💸</div>
+            <div class="noExpenses">
 
-            <h3>No expenses yet</h3>
+                <div>
+                    💸
+                </div>
 
-            <p>Add your first expense.</p>
+                <h3>
+                    No expenses yet
+                </h3>
 
-        </div>
-        
+                <p>
+                    Add your first expense.
+                </p>
+
+            </div>
+
         `;
 
         return;
@@ -1234,72 +2205,89 @@ function displayExpenses(){
     expensesList.innerHTML = "";
 
 
-    expenses.forEach(function(expense){
+    expenses.forEach(
+        function(expense){
 
-        const card =
-            document.createElement("div");
+            const card =
+                document.createElement(
+                    "div"
+                );
 
-        card.className = "expenseCard";
+
+            card.className =
+                "expenseCard";
 
 
-        card.innerHTML = `
+            card.innerHTML = `
 
-            <div class="expenseCardLeft">
+                <div class="expenseCardLeft">
 
-                <div class="expenseIcon">
-                    💸
+                    <div class="expenseIcon">
+                        💸
+                    </div>
+
+                    <div>
+
+                        <h3 class="expenseCardTitle">
+                            ${escapeHTML(
+                                expense.title
+                            )}
+                        </h3>
+
+                        <p class="expenseDate">
+                            ${expense.date}
+                        </p>
+
+                    </div>
+
                 </div>
 
-                <div>
 
-                    <h3 class="expenseCardTitle">
-                        ${escapeHTML(expense.title)}
-                    </h3>
+                <div class="expenseCardRight">
 
-                    <p class="expenseDate">
-                        ${expense.date}
-                    </p>
+                    <strong class="expenseMoney">
+                        -₹${Number(
+                            expense.amount
+                        ).toLocaleString("en-IN")}
+                    </strong>
+
+                    <button
+                        class="deleteExpenseBtn"
+                        onclick="deleteExpense(${expense.id})"
+                    >
+                        ×
+                    </button>
 
                 </div>
 
-            </div>
+            `;
 
 
-            <div class="expenseCardRight">
+            expensesList.appendChild(
+                card
+            );
 
-                <strong class="expenseMoney">
-                    -₹${expense.amount.toLocaleString("en-IN")}
-                </strong>
-
-                <button
-                    class="deleteExpenseBtn"
-                    onclick="deleteExpense(${expense.id})"
-                >
-                    ×
-                </button>
-
-            </div>
-
-        `;
-
-
-        expensesList.appendChild(card);
-
-    });
+        }
+    );
 
 }
 
 
-/* DELETE */
+
+/* =====================================================
+   DELETE EXPENSE
+===================================================== */
 
 function deleteExpense(id){
 
     expenses =
-        expenses.filter(function(expense){
+        expenses.filter(
+            function(expense){
 
-            return expense.id !== id;
+                return expense.id !== id;
 
-        });
+            }
+        );
 
 
     localStorage.setItem(
@@ -1312,28 +2300,273 @@ function deleteExpense(id){
 
     updateMoney();
 
+    updateStats();
+
 }
 
 
-/* SECURITY */
+
+/* =====================================================
+   WEEKLY STATS
+===================================================== */
+
+function updateStats(){
+
+    const ids = [
+
+        "barMon",
+        "barTue",
+        "barWed",
+        "barThu",
+        "barFri",
+        "barSat",
+        "barSun"
+
+    ];
+
+
+    const amounts = {
+
+        barMon:0,
+        barTue:0,
+        barWed:0,
+        barThu:0,
+        barFri:0,
+        barSat:0,
+        barSun:0
+
+    };
+
+
+    const now =
+        new Date();
+
+
+    expenses.forEach(
+        function(expense){
+
+            const date =
+                new Date(
+                    Number(expense.id)
+                );
+
+
+            const difference =
+                Math.floor(
+                    (
+                        now.getTime()
+                        -
+                        date.getTime()
+                    )
+                    /
+                    86400000
+                );
+
+
+            if(
+                difference >= 0 &&
+                difference < 7
+            ){
+
+                const day =
+                    date.getDay();
+
+
+                const dayIds = [
+
+                    "barSun",
+                    "barMon",
+                    "barTue",
+                    "barWed",
+                    "barThu",
+                    "barFri",
+                    "barSat"
+
+                ];
+
+
+                amounts[
+                    dayIds[day]
+                ] += Number(
+                    expense.amount
+                );
+
+            }
+
+        }
+    );
+
+
+    let maximum = 0;
+
+
+    ids.forEach(
+        function(id){
+
+            if(
+                amounts[id] >
+                maximum
+            ){
+
+                maximum =
+                    amounts[id];
+
+            }
+
+        }
+    );
+
+
+    ids.forEach(
+        function(id){
+
+            const bar =
+                document.getElementById(
+                    id
+                );
+
+
+            if(maximum === 0){
+
+                bar.style.height =
+                    "5px";
+
+            }
+
+            else{
+
+                const height =
+                    Math.max(
+                        8,
+                        (
+                            amounts[id]
+                            /
+                            maximum
+                        ) * 180
+                    );
+
+
+                bar.style.height =
+                    height + "px";
+
+            }
+
+        }
+    );
+
+
+    updateTip();
+
+}
+
+
+
+/* =====================================================
+   MONEY TIP
+===================================================== */
+
+function updateTip(){
+
+    const tip =
+        document.getElementById(
+            "moneyTip"
+        );
+
+
+    if(expenses.length === 0){
+
+        tip.textContent =
+            "Add some expenses and I'll help you understand your spending.";
+
+        return;
+
+    }
+
+
+    let total = 0;
+
+
+    expenses.forEach(
+        function(expense){
+
+            total += Number(
+                expense.amount
+            );
+
+        }
+    );
+
+
+    if(salary <= 0){
+
+        tip.textContent =
+            "Add your monthly salary to get more useful spending insights.";
+
+        return;
+
+    }
+
+
+    const percentage =
+        (total / salary) * 100;
+
+
+    if(percentage >= 50){
+
+        tip.textContent =
+            "Your recorded expenses are already a large part of your monthly income. Keep an eye on your biggest spending categories.";
+
+    }
+
+    else if(percentage >= 25){
+
+        tip.textContent =
+            "You're using a noticeable portion of your income. Reviewing your largest expenses could help you plan better.";
+
+    }
+
+    else{
+
+        tip.textContent =
+            "Your recorded spending is currently below 25% of your monthly income. Keep tracking consistently.";
+
+    }
+
+}
+
+
+
+/* =====================================================
+   ESCAPE TEXT
+===================================================== */
 
 function escapeHTML(text){
 
     const div =
-        document.createElement("div");
+        document.createElement(
+            "div"
+        );
 
-    div.textContent = text;
+
+    div.textContent =
+        text;
+
 
     return div.innerHTML;
 
 }
 
 
-/* START */
+
+/* =====================================================
+   START APP
+===================================================== */
 
 displayExpenses();
 
 updateMoney();
+
+updateStats();
 
 </script>
 
