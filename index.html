@@ -189,27 +189,100 @@
         </section>
 
 
-        <!-- PART 1 MESSAGE -->
+<!-- ================= EXPENSES ================= -->
 
-        <div class="comingSoon">
+<section class="expensesSection">
+
+    <div class="sectionHeader">
+
+        <div>
+            <p class="smallText">MONEY TRACKER</p>
+
+            <h2>Expenses</h2>
+        </div>
+
+        <button id="addExpenseBtn" class="addExpenseBtn">
+            +
+        </button>
+
+    </div>
+
+
+    <!-- ADD EXPENSE FORM -->
+
+    <div id="expenseForm" class="expenseForm">
+
+        <h3>Add Expense</h3>
+
+        <label>
+            Expense Title
+        </label>
+
+        <input
+            id="expenseTitle"
+            type="text"
+            placeholder="e.g. Food"
+        >
+
+
+        <label>
+            Amount Spent
+        </label>
+
+        <input
+            id="expenseAmount"
+            type="number"
+            placeholder="e.g. 500"
+        >
+
+
+        <div class="expenseFormButtons">
+
+            <button
+                id="cancelExpenseBtn"
+                class="cancelExpenseBtn">
+
+                Cancel
+
+            </button>
+
+
+            <button
+                id="saveExpenseBtn"
+                class="saveExpenseBtn">
+
+                Save Expense
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- EXPENSE CARDS -->
+
+    <div id="expensesList">
+
+        <div class="noExpenses">
 
             <div>
-                💳
+                💸
             </div>
 
             <h3>
-                Expense Manager
+                No expenses yet
             </h3>
 
             <p>
-                Your expense tracker will appear here
-                in Part 2.
+                Add your first expense.
             </p>
 
         </div>
 
-
     </div>
+
+</section>
 
 
     <script src="script.js"></script>
