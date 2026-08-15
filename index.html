@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Finance Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- PASSWORD SCREEN -->
+
+    <div id="lockScreen">
+
+        <div class="lockCard">
+
+            <div class="lockIcon">
+                🔐
+            </div>
+
+            <p class="smallText">
+                PERSONAL FINANCE
+            </p>
+
+            <h1>
+                FINANCE<br>
+                <span>MANAGER</span>
+            </h1>
+
+            <p class="description">
+                Your money. Your control.
+            </p>
+
+            <input
+                id="password"
+                type="password"
+                placeholder="Enter password"
+            >
+
+            <button id="unlockBtn">
+                ENTER APP →
+            </button>
+
+            <p id="wrongPassword"></p>
+
+        </div>
+
+    </div>
+
+
+    <!-- MAIN APP -->
+
+    <div id="app">
+
+        <!-- HEADER -->
+
+        <header>
+
+            <div class="titleArea">
+
+                <p class="smallText">
+                    WELCOME BACK
+                </p>
+
+                <h1>
+                    FINANCE<br>
+                    <span>MANAGER</span>
+                </h1>
+
+                <p class="description">
+                    Take control of your money.
+                </p>
+
+            </div>
+
+
+            <!-- ROBOT -->
+
+            <div class="robotArea">
+
+                <div class="glow"></div>
+
+                <div class="robot">
+
+                    <div class="antenna">
+                        <div></div>
+                    </div>
+
+                    <div class="robotHead">
+
+                        <div class="eyes">
+                            <div></div>
+                            <div></div>
+                        </div>
+
+                        <div class="mouth"></div>
+
+                    </div>
+
+                    <div class="robotBody">
+
+                        <div class="robotScreen">
+                            ₹
+                        </div>
+
+                        <div class="robotLight"></div>
+
+                    </div>
+
+                    <div class="arm leftArm"></div>
+                    <div class="arm rightArm"></div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- TOTAL BALANCE -->
+
+        <section class="balanceCard">
+
+            <div class="cardTop">
+
+                <div>
+
+                    <p>TOTAL BALANCE</p>
+
+                    <span>
+                        ● Available
+                    </span>
+
+                </div>
+
+                <div class="moneyIcon">
+                    ₹
+                </div>
+
+            </div>
+
+            <h2 id="balance">
+                ₹0
+            </h2>
+
+            <div class="cardBottom">
+
+                <span>
+                    Your available money
+                </span>
+
+                <span>
+                    ↗
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- MONTHLY SALARY -->
+
+        <section class="salaryCard">
+
+            <div class="salaryIcon">
+                💼
+            </div>
+
+            <div class="salaryInfo">
+
+                <p>
+                    SALARY PER MONTH
+                </p>
+
+                <h2 id="salary">
+                    ₹0
+                </h2>
+
+            </div>
+
+            <button id="salaryBtn">
+                + ADD
+            </button>
+
+        </section>
+
+
+        <!-- PART 1 MESSAGE -->
+
+        <div class="comingSoon">
+
+            <div>
+                💳
+            </div>
+
+            <h3>
+                Expense Manager
+            </h3>
+
+            <p>
+                Your expense tracker will appear here
+                in Part 2.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
