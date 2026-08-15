@@ -1,47 +1,64 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-    background: #070914;
+
+    background:
+        radial-gradient(
+            circle at 10% 5%,
+            rgba(113, 91, 255, 0.22),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 90%,
+            rgba(58, 153, 255, 0.15),
+            transparent 30%
+        ),
+        #070914;
+
     color: white;
     min-height: 100vh;
 }
+
 
 /* ================= PASSWORD ================= */
 
 #lockScreen {
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
 
-    background:
-        radial-gradient(circle at 10% 10%, rgba(111, 91, 255, .35), transparent 35%),
-        radial-gradient(circle at 90% 90%, rgba(54, 155, 255, .25), transparent 35%),
-        #070914;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
 }
 
 .lockCard {
     width: 100%;
-    max-width: 420px;
+    max-width: 410px;
+
     padding: 40px 30px;
+
     text-align: center;
 
-    border-radius: 30px;
-    background: rgba(19, 23, 38, .96);
+    background: #131724;
+
     border: 1px solid #292f42;
 
-    box-shadow: 0 30px 80px rgba(0,0,0,.5);
+    border-radius: 30px;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.5);
 }
 
 .lockIcon {
     width: 75px;
     height: 75px;
+
     margin: auto;
 
     display: flex;
@@ -49,26 +66,36 @@ body {
     justify-content: center;
 
     border-radius: 23px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7868ff,
+            #4d9eff
+        );
+
     font-size: 32px;
-
-    background: linear-gradient(135deg, #7969ff, #4c9eff);
 }
 
-.smallText {
+.label {
+    margin-top: 18px;
+
     color: #858da5;
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 2px;
-}
 
-.lockCard .smallText {
-    margin-top: 22px;
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
 }
 
 .lockCard h1 {
     margin-top: 10px;
+
     font-size: 43px;
-    line-height: .95;
+
+    line-height: 0.95;
+
     letter-spacing: -2px;
 }
 
@@ -76,67 +103,83 @@ h1 span {
     color: #8b7dff;
 }
 
-.description {
+.lockText {
+    margin: 17px 0 25px;
+
     color: #858da5;
-    margin: 15px 0 25px;
-    font-size: 14px;
 }
 
-#password {
+#passwordInput {
     width: 100%;
+
     padding: 16px;
 
-    border-radius: 15px;
     border: 1px solid #30374e;
+
+    border-radius: 15px;
 
     outline: none;
 
     background: #0a0d16;
+
     color: white;
 
     text-align: center;
+
     font-size: 16px;
 }
 
-#password:focus {
+#passwordInput:focus {
     border-color: #7868ff;
 }
 
 #unlockBtn {
     width: 100%;
+
     margin-top: 12px;
+
     padding: 16px;
 
     border: none;
+
     border-radius: 15px;
+
+    background:
+        linear-gradient(
+            100deg,
+            #7868ff,
+            #4d9eff
+        );
 
     color: white;
 
-    background: linear-gradient(100deg, #7868ff, #4d9eff);
-
-    font-size: 14px;
     font-weight: 800;
 
     cursor: pointer;
 }
 
-#wrongPassword {
-    min-height: 18px;
-    margin-top: 12px;
+#passwordError {
+    min-height: 20px;
+
+    margin-top: 10px;
+
     color: #ff6878;
+
     font-size: 13px;
 }
 
 
-/* ================= MAIN APP ================= */
+/* ================= APP ================= */
 
 #app {
     display: none;
 
+    width: 100%;
     max-width: 1100px;
+
     margin: auto;
 
-    padding: 35px 20px 70px;
+    padding: 35px 20px 80px;
 }
 
 
@@ -144,35 +187,48 @@ h1 span {
 
 header {
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
-    margin-bottom: 35px;
+    margin-bottom: 25px;
 }
 
 .titleArea h1 {
-    margin-top: 9px;
+    margin-top: 8px;
 
-    font-size: 55px;
-    line-height: .9;
+    font-size: 58px;
+
+    line-height: 0.9;
+
     letter-spacing: -3px;
+}
+
+.subtitle {
+    margin-top: 18px;
+
+    color: #858da5;
+
+    font-size: 15px;
 }
 
 
 /* ================= ROBOT ================= */
 
 .robotArea {
-    width: 170px;
+    width: 180px;
     height: 180px;
 
     position: relative;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 }
 
-.glow {
+.robotGlow {
     position: absolute;
 
     width: 140px;
@@ -180,18 +236,19 @@ header {
 
     border-radius: 50%;
 
-    background: #7061ff;
+    background: #7868ff;
 
     filter: blur(55px);
 
-    opacity: .25;
+    opacity: 0.25;
 }
 
 .robot {
-    width: 110px;
-    height: 160px;
-
     position: relative;
+
+    width: 120px;
+    height: 165px;
+
     z-index: 2;
 }
 
@@ -199,22 +256,22 @@ header {
     position: absolute;
 
     top: 0;
-    left: 53px;
+    left: 58px;
 
     width: 4px;
-    height: 20px;
+    height: 22px;
 
     background: #7868ff;
 }
 
 .antenna div {
-    width: 9px;
-    height: 9px;
-
     position: absolute;
 
     top: -5px;
     left: -2px;
+
+    width: 9px;
+    height: 9px;
 
     border-radius: 50%;
 
@@ -226,27 +283,33 @@ header {
 .robotHead {
     position: absolute;
 
-    top: 18px;
-    left: 12px;
+    top: 20px;
+    left: 15px;
 
-    width: 87px;
-    height: 70px;
+    width: 90px;
+    height: 72px;
 
-    border-radius: 24px;
+    border-radius: 25px;
 
-    background: linear-gradient(145deg, #897bff, #5144bc);
+    background:
+        linear-gradient(
+            145deg,
+            #897bff,
+            #5144bc
+        );
 }
 
 .eyes {
     display: flex;
+
     justify-content: center;
 
-    gap: 20px;
+    gap: 22px;
 
-    padding-top: 20px;
+    padding-top: 22px;
 }
 
-.eyes div {
+.eyes span {
     width: 9px;
     height: 12px;
 
@@ -257,8 +320,8 @@ header {
     box-shadow: 0 0 12px #64baff;
 }
 
-.mouth {
-    width: 22px;
+.robotMouth {
+    width: 24px;
     height: 5px;
 
     margin: 8px auto;
@@ -271,26 +334,32 @@ header {
 .robotBody {
     position: absolute;
 
-    top: 94px;
-    left: 24px;
+    top: 96px;
+    left: 29px;
 
-    width: 62px;
-    height: 56px;
+    width: 63px;
+    height: 57px;
 
     border-radius: 18px;
 
-    background: linear-gradient(145deg, #30374c, #151a28);
+    background:
+        linear-gradient(
+            145deg,
+            #30374c,
+            #151a28
+        );
 
     border: 1px solid #3a4158;
 }
 
 .robotScreen {
-    width: 35px;
-    height: 25px;
+    width: 36px;
+    height: 26px;
 
     margin: 10px auto;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -314,13 +383,13 @@ header {
     background: #8173ff;
 }
 
-.arm {
+.robotArm {
     position: absolute;
 
-    top: 98px;
+    top: 100px;
 
     width: 11px;
-    height: 39px;
+    height: 40px;
 
     border-radius: 10px;
 
@@ -329,12 +398,77 @@ header {
 
 .leftArm {
     left: 10px;
+
     transform: rotate(25deg);
 }
 
 .rightArm {
-    right: 8px;
+    right: 7px;
+
     transform: rotate(-25deg);
+}
+
+
+/* ================= NAV ================= */
+
+.mainNav {
+    width: 100%;
+
+    display: flex;
+
+    gap: 8px;
+
+    padding: 7px;
+
+    margin-bottom: 25px;
+
+    background: #111521;
+
+    border: 1px solid #292f42;
+
+    border-radius: 19px;
+}
+
+.navBtn {
+    flex: 1;
+
+    padding: 14px 10px;
+
+    border: none;
+
+    border-radius: 13px;
+
+    background: transparent;
+
+    color: #777f94;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+.navBtn.active {
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7868ff,
+            #4d9eff
+        );
+}
+
+
+/* ================= PAGE SYSTEM ================= */
+
+.page {
+    display: none !important;
+}
+
+.page.active {
+    display: block !important;
 }
 
 
@@ -343,38 +477,44 @@ header {
 .balanceCard {
     padding: 28px;
 
+    margin-bottom: 16px;
+
     border-radius: 27px;
 
-    background: linear-gradient(
-        135deg,
-        #6052e8,
-        #7868ff 55%,
-        #4d9eff
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #6052e8,
+            #7868ff 55%,
+            #4d9eff
+        );
 
-    box-shadow: 0 25px 60px rgba(85,75,230,.25);
-
-    margin-bottom: 16px;
+    box-shadow:
+        0 25px 60px rgba(85, 75, 230, 0.25);
 }
 
-.cardTop {
+.balanceTop {
     display: flex;
+
     align-items: flex-start;
+
     justify-content: space-between;
 }
 
-.cardTop p {
+.cardLabel {
     font-size: 11px;
+
     font-weight: 800;
+
     letter-spacing: 1.8px;
-    opacity: .8;
 }
 
-.cardTop span {
-    display: block;
+.available {
     margin-top: 7px;
+
     font-size: 11px;
-    opacity: .7;
+
+    opacity: 0.7;
 }
 
 .moneyIcon {
@@ -382,31 +522,29 @@ header {
     height: 45px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
     border-radius: 14px;
 
-    background: rgba(255,255,255,.13);
+    background: rgba(255, 255, 255, 0.15);
 
     font-size: 21px;
-    font-weight: 800;
 }
 
 .balanceCard h2 {
-    margin: 17px 0;
+    margin: 18px 0;
 
     font-size: 45px;
+
     letter-spacing: -1px;
 }
 
-.cardBottom {
-    display: flex;
-    justify-content: space-between;
-
+.balanceBottom {
     font-size: 12px;
 
-    opacity: .7;
+    opacity: 0.7;
 }
 
 
@@ -414,12 +552,14 @@ header {
 
 .salaryCard {
     display: flex;
+
     align-items: center;
 
     gap: 14px;
 
     padding: 20px;
-    margin-bottom: 35px;
+
+    margin-bottom: 25px;
 
     border-radius: 22px;
 
@@ -433,12 +573,13 @@ header {
     height: 50px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
     border-radius: 16px;
 
-    background: rgba(120,104,255,.12);
+    background: #20213d;
 
     font-size: 22px;
 }
@@ -451,6 +592,7 @@ header {
     color: #858da5;
 
     font-size: 10px;
+
     font-weight: 800;
 
     letter-spacing: 1.5px;
@@ -458,6 +600,7 @@ header {
 
 .salaryInfo h2 {
     margin-top: 5px;
+
     font-size: 23px;
 }
 
@@ -465,6 +608,7 @@ header {
     padding: 11px 17px;
 
     border: none;
+
     border-radius: 12px;
 
     background: #292e43;
@@ -477,18 +621,48 @@ header {
 }
 
 
-/* ==================================================
-   EXPENSE MANAGER
-================================================== */
+/* ================= WELCOME ================= */
 
-.expensesSection {
-    margin-top: 10px;
+.welcomeBox {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 25px;
+
+    border-radius: 23px;
+
+    background: #131724;
+
+    border: 1px solid #292f42;
 }
+
+.welcomeBox h2 {
+    margin-bottom: 7px;
+
+    font-size: 22px;
+}
+
+.welcomeBox p {
+    color: #858da5;
+
+    font-size: 13px;
+}
+
+.welcomeRobot {
+    font-size: 50px;
+}
+
+
+/* ================= SECTION ================= */
 
 .sectionHeader {
     display: flex;
 
     align-items: center;
+
     justify-content: space-between;
 
     margin-bottom: 20px;
@@ -497,55 +671,35 @@ header {
 .sectionHeader h2 {
     margin-top: 6px;
 
-    font-size: 30px;
-
-    letter-spacing: -1px;
+    font-size: 32px;
 }
 
-.addExpenseBtn {
+.addBtn {
     width: 55px;
     height: 55px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
     border: none;
+
     border-radius: 17px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7868ff,
+            #4d9eff
+        );
 
     color: white;
 
-    background: linear-gradient(
-        135deg,
-        #7868ff,
-        #4d9eff
-    );
-
-    font-size: 31px;
-    font-weight: 400;
+    font-size: 32px;
 
     cursor: pointer;
-
-    box-shadow:
-        0 12px 30px rgba(100,90,255,.25);
-
-    transition: .2s;
-}
-
-.addExpenseBtn:hover {
-    transform: translateY(-2px);
-}
-
-.addExpenseBtn:active {
-    transform: scale(.94);
 }
 
 
 /* ================= EXPENSE FORM ================= */
 
 .expenseForm {
-    display: none;
-
     padding: 25px;
 
     margin-bottom: 20px;
@@ -555,9 +709,6 @@ header {
     background: #131724;
 
     border: 1px solid #30364b;
-
-    box-shadow:
-        0 15px 40px rgba(0,0,0,.2);
 }
 
 .expenseForm h3 {
@@ -569,12 +720,12 @@ header {
 .expenseForm label {
     display: block;
 
-    margin-top: 15px;
-    margin-bottom: 8px;
+    margin: 15px 0 8px;
 
     color: #858da5;
 
     font-size: 12px;
+
     font-weight: 700;
 }
 
@@ -583,27 +734,24 @@ header {
 
     padding: 15px;
 
+    border: 1px solid #30374e;
+
     border-radius: 13px;
 
-    border: 1px solid #30374e;
+    outline: none;
 
     background: #0a0d16;
 
     color: white;
-
-    outline: none;
 
     font-size: 15px;
 }
 
 .expenseForm input:focus {
     border-color: #7868ff;
-
-    box-shadow:
-        0 0 0 3px rgba(120,104,255,.1);
 }
 
-.expenseFormButtons {
+.formButtons {
     display: flex;
 
     gap: 10px;
@@ -611,12 +759,13 @@ header {
     margin-top: 22px;
 }
 
-.expenseFormButtons button {
+.formButtons button {
     flex: 1;
 
     padding: 14px;
 
     border: none;
+
     border-radius: 13px;
 
     font-weight: 800;
@@ -624,27 +773,28 @@ header {
     cursor: pointer;
 }
 
-.cancelExpenseBtn {
+.cancelBtn {
     background: #292e43;
 
     color: #a4acc0;
 }
 
-.saveExpenseBtn {
-    color: white;
+.saveBtn {
+    background:
+        linear-gradient(
+            90deg,
+            #7868ff,
+            #4d9eff
+        );
 
-    background: linear-gradient(
-        90deg,
-        #7868ff,
-        #4d9eff
-    );
+    color: white;
 }
 
 
-/* ================= NO EXPENSES ================= */
+/* ================= EXPENSE CARD ================= */
 
 .noExpenses {
-    padding: 40px 20px;
+    padding: 45px 20px;
 
     text-align: center;
 
@@ -655,31 +805,25 @@ header {
     border: 1px dashed #30364a;
 }
 
-.noExpenses div {
-    font-size: 36px;
+.noExpenses .emptyIcon {
+    font-size: 38px;
 
     margin-bottom: 10px;
 }
 
-.noExpenses h3 {
-    margin-bottom: 7px;
-
-    font-size: 18px;
-}
-
 .noExpenses p {
+    margin-top: 7px;
+
     color: #777f94;
 
     font-size: 13px;
 }
 
-
-/* ================= EXPENSE CARD ================= */
-
 .expenseCard {
     display: flex;
 
     align-items: center;
+
     justify-content: space-between;
 
     gap: 15px;
@@ -693,26 +837,9 @@ header {
     background: #131724;
 
     border: 1px solid #292f42;
-
-    box-shadow:
-        0 10px 30px rgba(0,0,0,.15);
-
-    animation: cardAppear .25s ease;
 }
 
-@keyframes cardAppear {
-    from {
-        opacity: 0;
-        transform: translateY(8px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.expenseCardLeft {
+.expenseLeft {
     display: flex;
 
     align-items: center;
@@ -729,21 +856,24 @@ header {
     flex-shrink: 0;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
     border-radius: 16px;
 
-    background: rgba(120,104,255,.12);
+    background: #20203d;
 
     font-size: 23px;
 }
 
-.expenseCardTitle {
+.expenseTitle {
     font-size: 16px;
 
     white-space: nowrap;
+
     overflow: hidden;
+
     text-overflow: ellipsis;
 }
 
@@ -755,7 +885,7 @@ header {
     font-size: 11px;
 }
 
-.expenseCardRight {
+.expenseRight {
     display: flex;
 
     align-items: center;
@@ -765,23 +895,18 @@ header {
     flex-shrink: 0;
 }
 
-.expenseMoney {
+.expenseAmount {
     color: #ff7180;
 
     font-size: 16px;
-
-    font-weight: 800;
 }
 
-.deleteExpenseBtn {
+.deleteBtn {
     width: 32px;
     height: 32px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
     border: none;
+
     border-radius: 9px;
 
     background: #292e40;
@@ -793,8 +918,242 @@ header {
     cursor: pointer;
 }
 
-.deleteExpenseBtn:hover {
-    background: #3a3040;
+
+/* ================= STATS ================= */
+
+.statsCard {
+    padding: 25px;
+
+    margin-bottom: 15px;
+
+    border-radius: 23px;
+
+    background: #131724;
+
+    border: 1px solid #292f42;
+}
+
+.statsCard h3 {
+    font-size: 21px;
+}
+
+.statsCard > p {
+    margin-top: 5px;
+
+    color: #777f94;
+
+    font-size: 12px;
+}
+
+.chart {
+    height: 240px;
+
+    margin-top: 30px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-around;
+
+    gap: 10px;
+
+    border-bottom: 1px solid #30364a;
+}
+
+.chartDay {
+    height: 100%;
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 8px;
+}
+
+.bar {
+    width: 100%;
+
+    max-width: 40px;
+
+    height: 5px;
+
+    border-radius: 10px 10px 3px 3px;
+
+    background:
+        linear-gradient(
+            to top,
+            #7868ff,
+            #4d9eff
+        );
+
+    transition: height 0.5s ease;
+}
+
+.chartDay span {
+    padding-bottom: 8px;
+
+    color: #777f94;
+
+    font-size: 11px;
+}
+
+
+/* ================= TIP ================= */
+
+.tipCard {
+    display: flex;
+
+    gap: 15px;
+
+    padding: 20px;
+
+    margin-bottom: 15px;
+
+    border-radius: 20px;
+
+    background: #15162a;
+
+    border: 1px solid #38315e;
+}
+
+.tipIcon {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: #29214e;
+
+    font-size: 23px;
+}
+
+.tipCard h3 {
+    margin-bottom: 5px;
+}
+
+.tipCard p {
+    color: #858da5;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* ================= NOTES ================= */
+
+.notesCard {
+    padding: 22px;
+
+    border-radius: 22px;
+
+    background: #131724;
+
+    border: 1px solid #292f42;
+}
+
+.notesHeader {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+}
+
+.notesHeader .label {
+    margin-top: 0;
+}
+
+.notesHeader h3 {
+    margin-top: 5px;
+
+    font-size: 22px;
+}
+
+.notesHeader > span {
+    font-size: 28px;
+}
+
+#notes {
+    width: 100%;
+
+    min-height: 130px;
+
+    padding: 15px;
+
+    resize: vertical;
+
+    border: 1px solid #30374e;
+
+    border-radius: 14px;
+
+    outline: none;
+
+    background: #0a0d16;
+
+    color: white;
+
+    font-size: 14px;
+}
+
+#notes:focus {
+    border-color: #7868ff;
+}
+
+#saveNotesBtn {
+    margin-top: 12px;
+
+    padding: 12px 18px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #7868ff,
+            #4d9eff
+        );
+
+    color: white;
+
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+#notesSaved {
+    display: inline-block;
+
+    margin-left: 10px;
+
+    color: #777f94;
+
+    font-size: 11px;
+}
+
+
+/* ================= HIDDEN ================= */
+
+.hidden {
+    display: none !important;
 }
 
 
@@ -803,11 +1162,11 @@ header {
 @media (max-width: 650px) {
 
     #app {
-        padding: 25px 15px 60px;
+        padding: 25px 15px 70px;
     }
 
     header {
-        margin-bottom: 25px;
+        align-items: center;
     }
 
     .titleArea h1 {
@@ -816,56 +1175,39 @@ header {
 
     .robotArea {
         width: 120px;
-        transform: scale(.75);
-    }
 
-    .balanceCard {
-        padding: 23px;
+        transform: scale(0.72);
     }
 
     .balanceCard h2 {
         font-size: 36px;
     }
 
-    .salaryCard {
-        padding: 16px;
+    .navBtn {
+        font-size: 12px;
     }
 
-    .salaryInfo h2 {
-        font-size: 20px;
+    .navBtn span {
+        display: block;
+
+        margin-top: 4px;
     }
 
-    .expenseCard {
-        padding: 14px;
-    }
-
-    .expenseMoney {
-        font-size: 13px;
-    }
-
-    .expenseCardTitle {
+    .expenseTitle {
         max-width: 120px;
     }
 
-    .expenseFormButtons {
+    .expenseAmount {
+        font-size: 14px;
+    }
+
+    .formButtons {
         flex-direction: column;
     }
 
-}
+    #notesSaved {
+        display: block;
 
-@media (max-width: 430px) {
-
-    .titleArea h1 {
-        font-size: 32px;
+        margin: 10px 0 0;
     }
-
-    .robotArea {
-        width: 90px;
-        transform: scale(.6);
-    }
-
-    .balanceCard h2 {
-        font-size: 32px;
-    }
-
 }
