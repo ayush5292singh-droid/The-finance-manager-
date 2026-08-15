@@ -11,7 +11,7 @@
 
 <body>
 
-<!-- ================= PASSWORD SCREEN ================= -->
+<!-- ================= LOCK SCREEN ================= -->
 
 <div id="lockScreen">
 
@@ -19,7 +19,7 @@
 
         <div class="lockIcon">🔐</div>
 
-        <p class="label">PERSONAL FINANCE</p>
+        <p class="smallTitle">PERSONAL FINANCE</p>
 
         <h1>
             FINANCE<br>
@@ -31,16 +31,16 @@
         </p>
 
         <input
-            type="password"
             id="passwordInput"
+            type="password"
             placeholder="Enter password"
         >
 
-        <button id="unlockBtn">
+        <button id="unlockButton">
             ENTER APP →
         </button>
 
-        <p id="passwordError"></p>
+        <p id="errorMessage"></p>
 
     </div>
 
@@ -55,9 +55,9 @@
 
     <header>
 
-        <div class="titleArea">
+        <div class="headerText">
 
-            <p class="label">
+            <p class="smallTitle">
                 WELCOME BACK
             </p>
 
@@ -75,426 +75,126 @@
 
         <!-- ROBOT -->
 
-        <div class="robotArea">
+        <div class="robot">
 
-            <div class="robotGlow"></div>
+            <div class="antenna"></div>
 
-            <div class="robot">
+            <div class="robotHead">
 
-                <div class="antenna">
+                <div class="eyes">
+                    <div></div>
                     <div></div>
                 </div>
 
-                <div class="robotHead">
-
-                    <div class="eyes">
-                        <span></span>
-                        <span></span>
-                    </div>
-
-                    <div class="robotMouth"></div>
-
-                </div>
-
-                <div class="robotBody">
-
-                    <div class="robotScreen">
-                        ₹
-                    </div>
-
-                    <div class="robotLight"></div>
-
-                </div>
-
-                <div class="robotArm leftArm"></div>
-                <div class="robotArm rightArm"></div>
+                <div class="mouth"></div>
 
             </div>
+
+            <div class="robotBody">
+
+                <div class="robotScreen">
+                    ₹
+                </div>
+
+                <div class="robotDot"></div>
+
+            </div>
+
+            <div class="arm left"></div>
+            <div class="arm right"></div>
 
         </div>
 
     </header>
 
 
-    <!-- ================= NAVIGATION ================= -->
+    <!-- ================= BALANCE ================= -->
 
-    <nav class="mainNav">
+    <div class="balanceCard">
 
-        <button
-            class="navBtn active"
-            data-page="dashboardPage"
-        >
-            🏠
-            <span>Dashboard</span>
-        </button>
+        <div class="balanceTop">
 
-        <button
-            class="navBtn"
-            data-page="expensesPage"
-        >
-            💸
-            <span>Expenses</span>
-        </button>
+            <div>
 
-        <button
-            class="navBtn"
-            data-page="statsPage"
-        >
-            📊
-            <span>Stats</span>
-        </button>
+                <p class="cardTitle">
+                    TOTAL BALANCE
+                </p>
 
-    </nav>
-
-
-    <!-- ================= DASHBOARD ================= -->
-
-    <main>
-
-        <section
-            id="dashboardPage"
-            class="page active"
-        >
-
-            <!-- BALANCE -->
-
-            <div class="balanceCard">
-
-                <div class="balanceTop">
-
-                    <div>
-
-                        <p class="cardLabel">
-                            TOTAL BALANCE
-                        </p>
-
-                        <p class="available">
-                            ● Available
-                        </p>
-
-                    </div>
-
-                    <div class="moneyIcon">
-                        ₹
-                    </div>
-
-                </div>
-
-                <h2 id="balance">
-                    ₹0
-                </h2>
-
-                <p class="balanceBottom">
-                    Your available money
+                <p class="available">
+                    ● Available
                 </p>
 
             </div>
 
-
-            <!-- SALARY -->
-
-            <div class="salaryCard">
-
-                <div class="salaryIcon">
-                    💼
-                </div>
-
-                <div class="salaryInfo">
-
-                    <p>
-                        SALARY PER MONTH
-                    </p>
-
-                    <h2 id="salary">
-                        ₹0
-                    </h2>
-
-                </div>
-
-                <button id="salaryBtn">
-                    + ADD
-                </button>
-
+            <div class="moneyIcon">
+                ₹
             </div>
 
+        </div>
 
-            <!-- WELCOME BOX -->
+        <h2 id="balance">
+            ₹0
+        </h2>
 
-            <div class="welcomeBox">
+        <p class="balanceDescription">
+            Your available money
+        </p>
 
-                <div>
+    </div>
 
-                    <h2>
-                        Stay in control 💪
-                    </h2>
 
-                    <p>
-                        Track your spending and manage your money.
-                    </p>
+    <!-- ================= SALARY ================= -->
 
-                </div>
+    <div class="salaryCard">
 
-                <div class="welcomeRobot">
-                    🤖
-                </div>
+        <div class="salaryIcon">
+            💼
+        </div>
 
-            </div>
+        <div class="salaryInfo">
 
-        </section>
+            <p>
+                SALARY PER MONTH
+            </p>
 
+            <h2 id="salary">
+                ₹0
+            </h2>
 
-        <!-- ================= EXPENSES ================= -->
+        </div>
 
-        <section
-            id="expensesPage"
-            class="page"
-        >
+        <button id="salaryButton">
+            + ADD
+        </button>
 
-            <div class="sectionHeader">
+    </div>
 
-                <div>
 
-                    <p class="label">
-                        MONEY TRACKER
-                    </p>
+    <!-- ================= START MESSAGE ================= -->
 
-                    <h2>
-                        Expenses
-                    </h2>
+    <div class="welcomeCard">
 
-                </div>
+        <div>
 
-                <button
-                    id="addExpenseBtn"
-                    class="addBtn"
-                >
-                    +
-                </button>
+            <p class="cardTitle">
+                MONEY MANAGER
+            </p>
 
-            </div>
+            <h2>
+                Stay in control 💪
+            </h2>
 
+            <p>
+                Your expense tracker is coming next.
+            </p>
 
-            <!-- EXPENSE FORM -->
+        </div>
 
-            <div
-                id="expenseForm"
-                class="expenseForm hidden"
-            >
+        <div class="welcomeRobot">
+            🤖
+        </div>
 
-                <h3>
-                    Add Expense
-                </h3>
-
-                <label>
-                    Expense Title
-                </label>
-
-                <input
-                    id="expenseTitle"
-                    type="text"
-                    placeholder="e.g. Food"
-                >
-
-                <label>
-                    Amount Spent
-                </label>
-
-                <input
-                    id="expenseAmount"
-                    type="number"
-                    placeholder="e.g. 500"
-                    min="1"
-                >
-
-                <div class="formButtons">
-
-                    <button
-                        id="cancelExpenseBtn"
-                        class="cancelBtn"
-                    >
-                        Cancel
-                    </button>
-
-                    <button
-                        id="saveExpenseBtn"
-                        class="saveBtn"
-                    >
-                        Save Expense
-                    </button>
-
-                </div>
-
-            </div>
-
-
-            <!-- EXPENSE LIST -->
-
-            <div id="expensesList"></div>
-
-        </section>
-
-
-        <!-- ================= STATS ================= -->
-
-        <section
-            id="statsPage"
-            class="page"
-        >
-
-            <div class="sectionHeader">
-
-                <div>
-
-                    <p class="label">
-                        ANALYTICS
-                    </p>
-
-                    <h2>
-                        Weekly Stats
-                    </h2>
-
-                </div>
-
-            </div>
-
-
-            <div class="statsCard">
-
-                <h3>
-                    Spending This Week
-                </h3>
-
-                <p>
-                    Compare your spending by day
-                </p>
-
-
-                <div class="chart">
-
-                    <div class="chartDay">
-                        <div
-                            class="bar"
-                            id="barMon"
-                        ></div>
-                        <span>Mon</span>
-                    </div>
-
-                    <div class="chartDay">
-                        <div
-                            class="bar"
-                            id="barTue"
-                        ></div>
-                        <span>Tue</span>
-                    </div>
-
-                    <div class="chartDay">
-                        <div
-                            class="bar"
-                            id="barWed"
-                        ></div>
-                        <span>Wed</span>
-                    </div>
-
-                    <div class="chartDay">
-                        <div
-                            class="bar"
-                            id="barThu"
-                        ></div>
-                        <span>Thu</span>
-                    </div>
-
-                    <div class="chartDay">
-                        <div
-                            class="bar"
-                            id="barFri"
-                        ></div>
-                        <span>Fri</span>
-                    </div>
-
-                    <div class="chartDay">
-                        <div
-                            class="bar"
-                            id="barSat"
-                        ></div>
-                        <span>Sat</span>
-                    </div>
-
-                    <div class="chartDay">
-                        <div
-                            class="bar"
-                            id="barSun"
-                        ></div>
-                        <span>Sun</span>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- TIP -->
-
-            <div class="tipCard">
-
-                <div class="tipIcon">
-                    💡
-                </div>
-
-                <div>
-
-                    <h3>
-                        Money Tip
-                    </h3>
-
-                    <p id="moneyTip">
-                        Add expenses to receive spending tips.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- NOTES -->
-
-            <div class="notesCard">
-
-                <div class="notesHeader">
-
-                    <div>
-                        <p class="label">
-                            PERSONAL
-                        </p>
-
-                        <h3>
-                            Notes
-                        </h3>
-                    </div>
-
-                    <span>
-                        📝
-                    </span>
-
-                </div>
-
-                <textarea
-                    id="notes"
-                    placeholder="Write something here..."
-                ></textarea>
-
-                <button id="saveNotesBtn">
-                    Save Notes
-                </button>
-
-                <p id="notesSaved">
-                    Notes are saved automatically.
-                </p>
-
-            </div>
-
-        </section>
-
-    </main>
+    </div>
 
 </div>
 
